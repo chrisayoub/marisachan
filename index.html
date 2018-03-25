@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marisa | UX Researcher</title>
+    <meta charset="UTF-8">
+    <!-- Disable zooming on phone -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> 
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- fullPage.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
+
+    <!-- Typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/gqu7bcd.css">
+
+    <!-- Our styles and animations -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/customAnimate.css" />
+
+    <!-- Our menu styles -->
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+
+    <!-- Our script code -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+<body>
+    <!-- Menu code -->
+    <label>
+      <input type="checkbox"></input>
+      <span class="menu" onclick="menuClicked()">
+        <span class="hamburger"></span>
+      </span>
+      <ul>
+        <li>
+          <a href="#">HOME.</a>
+        </li>
+        <li>
+          <a href="#">ABOUT.</a>
+        </li>
+        <li>
+          <a href="#">FUN.</a>
+        </li>
+      </ul>
+    </label>
+
+    <!-- Content -->
+    <div id="fullpage">
+
+        <!-- Intro (Hello) -->
+        <div class="section">
+            <div style="height: 100vh; overflow: hidden; position: relative;">
+                <img id="coffee" src="images/coffee.png">
+                <img id="plant" src="images/plant.png">
+                <img id="paper" src="images/paper.png">
+
+                <div id="introText" class="animated fadeInUp">
+                    <h1 id="hello">Hello.</h1>
+                    <div id="helloDetail">
+                        <p>
+                            I'm Marisa. I pride myself in creating designs 
+                            that are usable for people
+                            and giving credit to the cups
+                            of coffee that help get me there.
+                            
+                            <br><br>
+
+                            Check out my 
+                            <a href="https://static1.squarespace.com/static/5a022186b1ffb6d6e8a8e758/t/5a8be4e4e2c4831ac9c947a3/1519117540882/Marisa+Chan+Resume.pdf" target="_blank">resume</a>!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- chevron down by Perametade Games from the Noun Project -->
+            <img src="images/down.png" id="arrow">
+        </div>
+
+        <!-- Design Process -->
+        <div class="section">
+            <div class="parentBox"> 
+                <div id="slider3" class="slide-left halfBox"> 
+                    <h1>My Design Process</h1>
+                    <h3>
+                        Design Thinking<br>
+                        Detailed look into my approach to designing</h3>
+                    </h3>
+                    <h3 class="learn"><a href="#"><span class="line"></span>Learn More</a></h3>
+                </div>
+                <div id="slider4" class="slide-right halfBox imageMobile">
+                    <img src="images/ringed notebook.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- Gardenio -->
+        <div class="section grayBack">
+            <div class="parentBox">
+                <div id="slider5" class="slide-left halfBox imageMobile">
+                    <img src="images/gardenio iphone.png">
+                </div> 
+                <div id="slider6" class="slide-right halfBox textRight"> 
+                    <h1>Gardenio</h1>
+                    <h3>
+                        UX Researcher<br>
+                        Beta Product Testing
+                    </h3>
+                    <h3 class="learn"><a href="#">Learn More<span class="line"></span></a></h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toilet Times -->
+        <div class="section">
+            <div class="parentBox">
+                <div id="slider7" class="slide-left halfBox">
+                    <h1>Toilet Times</h1>
+                    <h3>
+                        UI Designer<br>
+                        Android app for college students
+                    </h3>
+                    <h3 class="learn"><a href="#"><span class="line"></span>Learn More</a></h3>
+                </div>
+                <div id="slider8" class="slide-right halfBox imageMobile"> 
+                    <img src="images/toilet times mockup.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- Iconography -->
+        <div class="section grayBack">
+            <div class="parentBox"> 
+                <div id="slider9" class="slide-left halfBox imageMobile"> 
+                    <img src="images/icon_slide_new.png">
+                </div>
+                <div id="slider10" class="slide-right halfBox textRight">
+                    <h1>Iconography Research</h1>
+                    <h3>
+                        UX Researcher<br>
+                        iOS Page Flow Test &amp; Analysis
+                    </h3>
+                    <h3 class="learn"><a href="#">Learn More<span class="line"></span></a></h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blue Apron -->
+        <div class="section">
+            <div class="parentBox"> 
+                <div id="slider11" class="slide-left halfBox"> 
+                    <h1>Blue Apron</h1>
+                    <h3>
+                        UX Research<br>
+                        Customer Journey Mapping
+                    </h3>
+                    <h3 class="learn"><a href="#"><span class="line"></span>Learn More</a></h3>
+                </div>
+                <div id="slider12" class="slide-right halfBox imageMobile">
+                    <img src="images/blue apron image transp.png">
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

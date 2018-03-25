@@ -1,0 +1,299 @@
+/* For HW accel. */
+#fullpage {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Text styles */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 48pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #414042;
+    width: inherit;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #414042;
+    width: inherit;
+}
+
+p {
+    font-family: open-sans, sans-serif;
+    font-size: 12pt;
+    font-weight: 300;
+    color: #414042;
+}
+
+/* Link colors */
+a {
+    color: #414042;
+}
+
+/* MARK: Slide spacing */
+
+/* Parent box for splitting screen */
+.parentBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Half box on the screen*/
+.halfBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex: 50%;
+    height: 100vh;
+    width: 60%;
+}
+
+.halfBox img {
+    max-width: 50vw;
+    height: auto;
+}
+
+.grayBack {
+    background-color: #f8f8f8;
+}
+
+/* Used for aligning text to the right*/
+.textRight {
+    text-align: right;
+}
+
+/* Line that shows for Learn More */
+.line {
+    width: 10px;
+    height: 2px;
+    background: #F69473;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* Animate the line */
+    transition: width 0.5s;
+}
+
+/* Line show on hover */
+.learn a:hover > .line {
+    width: 50px;
+}
+
+/* Remove link underline from Learn More */
+.learn a {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+
+/* MARK: Intro page and animations */
+#introText {
+    animation-delay: 0.3s; 
+    position: absolute;     
+    left: 0; 
+    right: 0;
+}
+
+#hello {
+    text-align: center;
+    color: #F69473; 
+    font-size: 100pt;
+    margin-top: 30vh;
+}
+
+#helloDetail {
+    width: 376px; 
+    margin: auto;
+    text-align: left;
+}
+
+/* Items and their animations */
+#coffee {
+    position: absolute;
+    right: -100px; 
+    bottom: -150px;
+
+    animation-name: coffee;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+
+    /* Off-screen at first */
+    transform: translateY(50vh) translateX(30vw);
+}
+
+@keyframes coffee {
+    0%   { transform: translateY(50vh) translateX(30vw); }
+    100% { transform: translateY(0) translateX(0);  }
+}
+
+#plant {
+    position: absolute;
+    left: 40px; 
+    top: -250px;
+
+    animation-name: plant;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+
+    /* Off-screen at first */
+    transform: translateY(-30vh) translateX(-30vw);
+}
+
+@keyframes plant {
+    0%   { transform: translateY(-30vh) translateX(-30vw); }
+    100% { transform: translateY(0) translateX(0);  }
+}
+
+#paper {
+    position: absolute; 
+    transform: rotate(-15deg); 
+    left: -400px; 
+    bottom: -500px;
+    animation-name: paper;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+
+    /* Off-screen at first */
+    transform: translateY(35vh) translateX(-30vw);
+}
+
+@keyframes paper {
+    0%   { transform: translateY(35vh) translateX(-30vw) rotate(-15deg); }
+    100% { transform: translateY(0) translateX(0) rotate(-15deg);  }
+}
+
+/* Down arrow on intro slide */
+#arrow {
+    animation-duration: 1.5s;
+    position: absolute; 
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    animation-name: arrowBounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+/* Animation for bouncing arrow */
+@keyframes arrowBounce {
+    0%   { transform: translateY(0%);  }
+    50%  { transform: translateY(50%); }
+    100% { transform: translateY(0%);  }
+}
+
+/* MARK: Mobile */
+@media only screen and (max-width : 1024px) {
+    /* For mobile phones: */
+    .parentBox {
+        height: 100%;
+
+        flex-flow: column;
+        flex-wrap: nowrap;
+    }
+
+    .halfBox img {
+        max-width: 95%;
+        max-height: 95%;
+        visibility: hidden;
+    }
+
+    .imageMobile {
+        order: -1;
+        justify-content: flex-end !important;
+    }
+
+    .halfBox {
+        width: 87.5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        height: auto;
+
+        flex-grow: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    h1 {
+        font-size: 24pt !important;
+    }
+
+    h3 {
+        font-size: 12pt !important;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .learn a {
+        border: 1px solid black;
+        border-radius: 6px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #paper {
+        left: -625px; 
+        bottom: -580px;
+    }
+
+    #coffee {
+        right: -360px; 
+        bottom: -180px;
+    }
+
+    #helloDetail {
+        width: 62.5%;
+    }
+
+    #plant {
+        top: -300px;
+    }
+
+    #hello {
+        font-size: 48pt !important;
+        width: 62.5%;
+        text-align: left !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/*
+@media only screen and (min-width : 768px) and (max-width : 1024px)  { 
+   
+    .line {
+        display: none;
+    }
+
+    .learn a {
+        border: 1px solid black;
+        border-radius: 6px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-size: 24pt !important;
+    }
+
+    h3 {
+        font-size: 12pt !important;
+    }
+}
+*/

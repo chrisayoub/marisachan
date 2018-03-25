@@ -1,0 +1,82 @@
+/* Left */
+/* https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition */
+.slide-left {
+    transform: translateX(-50vw);
+    -webkit-transform: translateX(-50vw);
+}
+
+.slide-in-left {
+    animation: slide-in-left 1.0s 0.3s forwards;
+    -webkit-animation: slide-in-left 1.0s 0.3s forwards;
+}
+
+.slide-out-left {
+    animation: slide-out-left 1.0s forwards;
+    -webkit-animation: slide-out-left 1.0s forwards;
+}
+    
+@keyframes slide-in-left {
+    100% { transform: translateX(0); }
+}
+
+@-webkit-keyframes slide-in-left {
+    100% { -webkit-transform: translateX(0); }
+}
+    
+@keyframes slide-out-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50vw); }
+}
+
+@-webkit-keyframes slide-out-left {
+    0% { -webkit-transform: translateX(0); }
+    100% { -webkit-transform: translateX(-50vw); }
+}
+
+/* Right */
+/* https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition */
+.slide-right {
+    transform: translateX(50vw);
+    -webkit-transform: translateX(50vw);
+}
+
+.slide-in-right {
+    animation: slide-in-right 1.0s 0.3s forwards;
+    -webkit-animation: slide-in-right 1.0s 0.3s forwards;
+}
+
+.slide-out-right {
+    animation: slide-out-right 1.0s forwards;
+    -webkit-animation: slide-out-right 1.0s forwards;
+}
+    
+@keyframes slide-in-right {
+    100% { transform: translateX(0); }
+}
+
+@-webkit-keyframes slide-in-right {
+    100% { -webkit-transform: translateX(0); }
+}
+    
+@keyframes slide-out-right {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50vw); }
+}
+
+@-webkit-keyframes slide-out-right {
+    0% { -webkit-transform: translateX(0); }
+    100% { -webkit-transform: translateX(50vw); }
+}
+
+@media only screen and (max-width: 1024px) { 
+    /* Mobile */
+    .slide-left {
+        transform: none;
+        -webkit-transform: none;
+    }
+
+    .slide-right {
+        transform: none;
+        -webkit-transform: none;
+    }
+}
