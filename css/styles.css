@@ -221,6 +221,8 @@ a {
     }
 
     .halfBox a img, .halfBox img {
+        max-width: 100%;
+        max-height: 100%;
         visibility: hidden;
     }
 
