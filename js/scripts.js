@@ -6,7 +6,7 @@ $(document).ready(function() {
                 animateSlide(index, nextIndex);
             } else {
                 /* Mobile */
-                animateImagesMobile(index, nextIndex);
+                animateImagesMobile(nextIndex);
             }
         },
         navigation: true,
@@ -19,73 +19,57 @@ $(document).ready(function() {
     };
 });
 
-var slidingSections = [2, 3, 4, 5, 6]; // PUT ALL SECTIONS WITH SLIDES HERE
-
+// Offset from first slide, used for animations
+let OFFSET = 2;
 
 // MARK: Mobile animation
 
-function animateImagesMobile(index, nextIndex) {
+function animateImagesMobile(nextIndex) {
     // Arriving at the section, slide in
-    if (slidingSections.includes(nextIndex)) {
-        var child = getImgFromParent(nextIndex * 2 - 1);
-        if (child != null) {
-            animateMobileImg(child);
-        }
-
-        child = getImgFromParent(nextIndex * 2);
-        if (child != null) {
-            animateMobileImg(child);
+    var parent = document.getElementsByClassName("imageMobile")[nextIndex - OFFSET];
+    if (parent != null) {
+        var img = parent.getElementsByTagName("img")[0];
+        if (img != null) {
+            img.style.visibility = "visible"; 
+            parent.classList.add("fadeInUp");
+            parent.classList.add("animated");
         }
     }
-}
-
-// Returns the image node if present, null otherwise
-function getImgFromParent(sliderVal) {
-    var slider = document.getElementById('slider' + sliderVal);
-    if (slider.children[0].nodeName === 'IMG') {
-        return slider.children[0];
-    }
-    return null;
-}
-
-// Makes image visible and animates it via parent
-function animateMobileImg(img) {
-    img.style.visibility = "visible"; 
-    img.parentNode.classList.add("fadeInUp");
-    img.parentNode.classList.add("animated");
 }
 
 // MARK: Desktop animation
 
-function animateSlide(index, nextIndex) {      
+function animateSlide(index, nextIndex) {
     // Leaving the section, slide out
-    if (slidingSections.includes(index)) {
-        var slide = index;
+    var parent = document.getElementsByClassName("parentBox")[index - OFFSET];
+    if (parent != null) {
+        var children = parent.children;
 
         // Slide out left
-        var slider = document.getElementById('slider' + (slide * 2 - 1));
-        slider.classList.remove('slide-in-left');
-        slider.classList.add('slide-out-left');
+        var slideOutLeft = children[0];
+        slideOutLeft.classList.remove('slide-in-left');
+        slideOutLeft.classList.add('slide-out-left');
 
         // Slide out right
-        slider = document.getElementById('slider' + (slide * 2));
-        slider.classList.remove('slide-in-right');
-        slider.classList.add('slide-out-right');
+        var slideOutRight = children[1];
+        slideOutRight.classList.remove('slide-in-right');
+        slideOutRight.classList.add('slide-out-right');
     }
 
     // Arriving at the section, slide in
-    if (slidingSections.includes(nextIndex)) {
-        var slide = nextIndex;
+    parent = document.getElementsByClassName("parentBox")[nextIndex - OFFSET];
+    if (parent != null) {
+        var children = parent.children;
 
         // Slide in left
-        var slider = document.getElementById('slider' + (slide * 2 - 1));
-        slider.classList.remove('slide-out-left');
-        slider.classList.add('slide-in-left');
+        var slideInLeft = children[0];
+        slideInLeft.classList.remove('slide-out-left');
+        slideInLeft.classList.add('slide-in-left');
         
         // Slide in right
-        var slider = document.getElementById('slider' + (slide * 2));
-        slider.classList.remove('slide-out-right');
-        slider.classList.add('slide-in-right');
+        var slideInRight = children[1];
+        slideInRight.classList.remove('slide-out-right');
+        slideInRight.classList.add('slide-in-right');
     }
 }
 
