@@ -62,6 +62,19 @@ a {
     height: auto;
 }
 
+.halfBox a img {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.halfBox a {
+    height: 100%;
+    width: 100%;
+}
+
 .grayBack {
     background-color: #f8f8f8;
 }
@@ -207,15 +220,8 @@ a {
         flex-wrap: nowrap;
     }
 
-    .halfBox img {
-        max-width: 100%;
-        max-height: 100%;
+    .halfBox a img, .halfBox img {
         visibility: hidden;
-    }
-
-    .halfBox a {
-        max-width: 95%;
-        max-height: 95%;
     }
 
     .imageMobile {
