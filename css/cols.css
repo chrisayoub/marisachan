@@ -14,6 +14,17 @@
     padding: 15px;
 }
 
+.centeredRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centeredRow p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .col-1_5 {width: 4.17%;}
