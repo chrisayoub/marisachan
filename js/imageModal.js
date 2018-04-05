@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	// When the user clicks on <span> (x) or anywhere except image, close the modal
 	modal.onclick = function(event) {
-		if (event.toElement.nodeName === "IMG") {
+		if (event.target.nodeName === "IMG") {
 			// Don't close if click on image
 			return;
 		}
