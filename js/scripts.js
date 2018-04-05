@@ -72,30 +72,3 @@ function animateSlide(index, nextIndex) {
         slideInRight.classList.add('slide-in-right');
     }
 }
-
-// MARK: Menu scrolling
-
-// Disable scrolling once menu is opened
-var menuOpen = false;
-
-function menuClicked() {
-    menuOpen = !menuOpen;
-    if (menuOpen) {
-        disableMobileScrolling();
-        $.fn.fullpage.setAllowScrolling(false);
-    } else {
-        enableMobileScrolling();
-        $.fn.fullpage.setAllowScrolling(true);
-    }
-}
-
-// For opening the menu on mobile
-function disableMobileScrolling() {
-    var x = window.scrollX;
-    var y = window.scrollY;
-    window.onscroll = function(){ window.scrollTo(x, y); };
-}
-
-function enableMobileScrolling() {
-    window.onscroll = function(){};
-}

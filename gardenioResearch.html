@@ -6,25 +6,25 @@
     <!-- Disable zooming on phone -->
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    <!-- Typekit -->
-    <link rel="stylesheet" href="https://use.typekit.net/gqu7bcd.css">
-
     <!-- AOS -->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/content.css" />
     <link rel="stylesheet" type="text/css" href="css/cols.css" />
+
+    <!-- Image modal -->
+    <link rel="stylesheet" type="text/css" href="css/imageModal.css" />
+    <script type="text/javascript" src="js/imageModal.js"></script>
+
+    <!-- Our menu -->
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <script type="text/javascript" src="js/menu.js"></script>
+
+    <!-- AOS Init -->
+    <script type="text/javascript" src="js/aosInit.js"></script>
 </head>
 <body>
-    <script>
-        AOS.init({
-            duration: 1000,
-            offset: 200,
-            once: true
-        });
-    </script>
-
     <!-- 1st row -->
     <div class="row">
         <div class="col-4"></div>
@@ -36,10 +36,11 @@
     <!-- 2nd row -->
     <div class="row rowSpace">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>OVERVIEW</h3>
         </div>
-        <div class="col-5">
+        <div class="col-6">
+            <h1>The Project</h1>
             <p>Gardenio is a socially-conscious, mission-driven company which allows for communities to organize and grow their own food in an ethical way, while supporting local nurseries and the environment.</p>
             <p class="smallText">My Role: UX Researcher, UX Research Designer<br>Collaborators: Kelly Gustainis, Gabi Vargas</p>
         </div>
@@ -47,7 +48,7 @@
 
     <div class="row rowSpace">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>BARRIERS</h3>
         </div>
         <div class="col-6">
@@ -60,7 +61,7 @@
     <div class="row gray">
         <div class="col-1"></div>
         <div class="col-3">
-            <img src="images/gardenio iphone.png" style="width: 100%;">
+            <img src="images/gardenio iphone.png">
         </div>
         <div class="col-2"></div>
         <div class="col-5" style="height: 100%; ">
@@ -71,7 +72,7 @@
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
@@ -81,23 +82,33 @@
     </div> 
 
     <div class="row">
+        <div class="col-1"></div>
+        <div class="col-3">
+            <h3>PROCESS</h3>
+        </div>
+        <div class="col-6">
+            <h1>User Personas</h1>
+        </div>
+     </div> 
+
+    <div class="row">
         <!-- <div class="col-1"></div> -->
         <div class="col-4" data-aos-delay="0" data-aos="fade-up">
-            <img src="images/Nina Chen.jpg" style="width: 100%;">
+            <img src="images/Nina Chen.jpg">
         </div>
         <!-- <div class="col-1_5"></div> -->
         <div class="col-4" data-aos-delay="400" data-aos="fade-up">
-            <img src="images/Daniel Snatch.jpg" style="width: 100%;">
+            <img src="images/Daniel Snatch.jpg">
         </div>
         <!-- <div class="col-1_5"></div> -->
         <div class="col-4" data-aos-delay="800" data-aos="fade-up">
-            <img src="images/Jackie Jam.jpg" style="width: 100%;">
+            <img src="images/Jackie Jam.jpg">
         </div>
     </div> 
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
@@ -109,14 +120,14 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10" data-aos="fade-up">
-            <img src="images/Doorstep_Large_Unboxed.png" style="width: 100%">
+            <img src="images/Doorstep_Large_Unboxed.png">
         </div>
     </div>
 
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
@@ -129,14 +140,14 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10" data-aos="fade-up">
-            <img src="images/Gardenio phone in hand.png" style="width: 100%">
+            <img src="images/Gardenio phone in hand.png">
         </div>
     </div>
 
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
@@ -148,13 +159,13 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10" data-aos="fade-up">
-            <img src="images/Gardenio survey on table.png" style="width: 100%">
+            <img src="images/Gardenio survey on table.png">
         </div>
     </div>
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
@@ -166,13 +177,13 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10" data-aos="fade-up">
-            <img src="images/Gardenio research party.JPG" style="width: 100%">
+            <img src="images/Gardenio research party.JPG">
         </div>
     </div>
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>RESULTS</h3>
         </div>
         <div class="col-6">
@@ -182,8 +193,23 @@
     </div> 
 
     <div class="row">
+        <!-- <div class="col-1"></div> -->
+        <div class="col-4" data-aos-delay="0" data-aos="fade-up">
+            <img src="images/pivot table 1.png">
+        </div>
+        <!-- <div class="col-1_5"></div> -->
+        <div class="col-4" data-aos-delay="400" data-aos="fade-up">
+            <img src="images/pivot table 2.png">
+        </div>
+        <!-- <div class="col-1_5"></div> -->
+        <div class="col-4" data-aos-delay="800" data-aos="fade-up">
+            <img src="images/pivot table 3.png">
+        </div>
+    </div> 
+
+    <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="slide-right">
+        <div class="col-3">
             <h3>REFLECTIONS</h3>
         </div>
         <div class="col-6">

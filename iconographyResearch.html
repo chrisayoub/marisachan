@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <!-- Disable zooming on phone -->
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-
-    <!-- Typekit -->
-    <link rel="stylesheet" href="https://use.typekit.net/gqu7bcd.css">
-
+    
     <!-- AOS -->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/content.css" />
     <link rel="stylesheet" type="text/css" href="css/cols.css" />
+
+    <!-- Image modal -->
+    <link rel="stylesheet" type="text/css" href="css/imageModal.css" />
+    <script type="text/javascript" src="js/imageModal.js"></script>
+
+    <!-- Our menu -->
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <script type="text/javascript" src="js/menu.js"></script>
+
+    <!-- AOS Init -->
+    <script type="text/javascript" src="js/aosInit.js"></script>
 </head>
 <body>
-    <script>
-        AOS.init({
-            duration: 1000,
-            offset: 200,
-            once: true
-        });
-    </script>
-
     <!-- 1st row -->
     <div class="row">
         <div class="col-4"></div>
@@ -36,19 +36,19 @@
     <!-- 2nd row -->
     <div class="row rowSpace">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="fade-up">
+        <div class="col-3">
             <h3>OVERVIEW</h3>
         </div>
         <div class="col-6">
             <h1>The Project</h1>
-            <p>Gardenio's mobile application includes an iconography set to help users navigate and use the app.</p>
+            <p>Gardenio's mobile application includes an iconography set to help users navigate and use the app. I was tasked with exploring other icon options to implement in place of the current icon pack.</p>
             <p class="smallText">My Role: UX Researcher, UX Research Designer, Graphic Designer</p>
         </div>
     </div> 
 
     <div class="row rowSpace">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="fade-up">
+        <div class="col-3">
             <h3>BARRIERS</h3>
         </div>
         <div class="col-6">
@@ -61,7 +61,7 @@
     <div class="row gray">
         <div class="col-1"></div>
         <div class="col-3">
-            <img src="images/gardenio iphone.png" style="width: 100%;">
+            <img src="images/icon_slide_new.png">
         </div>
         <div class="col-2"></div>
         <div class="col-5" style="height: 100%; ">
@@ -72,20 +72,55 @@
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="fade-up">
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
             <h1>Brainstorming</h1>
-            <p>I began by writing a research proposal for how I planned to execute my research, which included research questions, methodology, and procedure. Following approval, I went through our spreadsheet of user feedback and noted commonalties between problems that were stated during initial MVP testing.
-            <br><br>
-            Based on those comments, I explored a breadth of research articles and existing results about what makes icons most effective and intuitive for users. After compiling those findings, I found that icons are most usable based on four criteria: findability, recognition, information scent, and its attractiveness.</p>
+            <p>I began by writing a research proposal for how I planned to execute my research, which included research questions, methodology, and procedure. Following approval, I went through our spreadsheet of user feedback and noted commonalties between problems that were stated during initial MVP testing.</p>
         </div>
     </div> 
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="fade-up">
+        <div class="col-5" data-aos-delay="0" data-aos="fade-up">
+            <img src="images/icon research plan 1.png">
+        </div>
+        <div class="col-5" data-aos-delay="400" data-aos="fade-up">
+            <img src="images/icon research plan 2.png">
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-3">
+            <h3>PROCESS</h3>
+        </div>
+        <div class="col-6">
+            <h1>Brainstorming</h1>
+            <p>Based on those comments, I explored a breadth of research articles and existing results about what makes icons most effective and intuitive for users. After compiling those findings, I found that icons are most usable <span style="font-weight: 1000;">based on four criteria:</span></p>
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-2_5" data-aos-delay="0" data-aos="fade-up">
+            <img src="images/findability.png" class="noModal">
+        </div>
+        <div class="col-2_5" data-aos-delay="400" data-aos="fade-up">
+            <img src="images/recognition.png" class="noModal">
+        </div>
+        <div class="col-2_5" data-aos-delay="800" data-aos="fade-up">
+            <img src="images/info scent.png" class="noModal">
+        </div>
+        <div class="col-2_5" data-aos-delay="1200" data-aos="fade-up">
+            <img src="images/attractiveness.png" class="noModal">
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
@@ -96,14 +131,40 @@
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-10" data-aos="fade-up">
-            <img src="images/survey.png" style="width: 100%">
+        <div class="col-3" data-aos-delay="00" data-aos="fade-up">
+            <img src="images/iphone icon set 1.png">
         </div>
-    </div>
+        <div class="col-1_5"></div>
+        <div class="col-3" data-aos-delay="400" data-aos="fade-up">
+            <img src="images/iphone icon set 2.png">
+        </div>
+        <div class="col-1_5"></div>
+        <div class="col-3" data-aos-delay="800" data-aos="fade-up">
+            <img src="images/iphone icon set 3.png">
+        </div>
+    </div> 
+
 
     <div class="row">
         <div class="col-1"></div>
+        <div class="col-10" data-aos="fade-up">
+            <img src="images/Gardenio full page flow.png">
+        </div>
+    </div>
+
+
+    <!--
+    <div class="row">
+        <div class="col-1"></div>
         <div class="col-3" data-aos="fade-up">
+            <h1>Icon Pack Explorations</h1>
+        </div>
+    </div> -->
+
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-3">
             <h3>PROCESS</h3>
         </div>
         <div class="col-6">
@@ -114,9 +175,19 @@
         </div>
     </div> 
 
+
+    <!-- 3rd row -->
+    <div class="row gray">
+        <div class="col-2"></div>
+        <div class="col-7">
+            <h1><i>"This icon looks like a journal or book where I can keep information about plants. The little leaf on the book helps me understand that."</i></h1>
+            <h1 style="text-align: right;"><i>- User Tester</i></h1>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="fade-up">
+        <div class="col-3">
             <h3>RESULTS</h3>
         </div>
         <div class="col-6">
@@ -127,27 +198,12 @@
 
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3" data-aos="fade-up">
+        <div class="col-3">
             <h3>REFLECTIONS</h3>
         </div>
         <div class="col-6">
             <h1>Next Steps</h1>
             <p>Based on the feedback I collected, I presented my data to the team, and we have since implemented the best received iconography set into our mobile application. In addition to the feedback, I was able to find other problems users ran into while interacting with our app. I plan to use that information and create another research plan to take a look at our current information architecture format and look at ways to reorganize the information so it is more intuitive for users to find and retest.</p>
-        </div>
-    </div> 
-
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-3" data-aos-delay="00" data-aos="fade-up">
-            <img src="images/coffee.png" style="width: 100%;">
-        </div>
-        <div class="col-1_5"></div>
-        <div class="col-3" data-aos-delay="400" data-aos="fade-up">
-            <img src="images/paper.png" style="width: 100%;">
-        </div>
-        <div class="col-1_5"></div>
-        <div class="col-3" data-aos-delay="800" data-aos="fade-up">
-            <img src="images/glasses.png" style="width: 100%;">
         </div>
     </div> 
 
