@@ -1,6 +1,11 @@
 /* Typekit */
 @import url('https://use.typekit.net/gqu7bcd.css');
 
+/* For Mac */
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
 .gray {
 	background-color: #f8f8f8;
 	box-shadow: -15px 0px #f8f8f8, 15px 0px #f8f8f8;
