@@ -121,6 +121,7 @@ label input:checked + .menu .hamburger:before {
   width: 50px;
   visibility: hidden;
   transition: all 0.5s ease;
+  cursor: pointer;
 
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
