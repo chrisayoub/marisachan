@@ -38,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.body.appendChild(menuList);
 
     // Add button scroll-to-top, only on Desktop
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth < 900) {
         return;
     }
     var btn = document.createElement('img');
     btn.classList.add("noModal");
-    btn.src = "images/up arrow.png";
+    btn.src = "images/up-arrow.svg";
     btn.id = "upArrow";
     btn.onclick = function() {
         window.scroll({

@@ -68,7 +68,7 @@
     100% { -webkit-transform: translateX(50vw); }
 }
 
-@media only screen and (max-width: 1024px) { 
+@media only screen and (max-width: 900px) { 
     /* Mobile */
     .slide-left {
         transform: none;

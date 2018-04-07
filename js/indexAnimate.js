@@ -2,7 +2,7 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
         onLeave: function(index, nextIndex, direction) {
-            if (window.innerWidth > 1023) {
+            if (window.innerWidth >= 900) {
                 animateSlide(index, nextIndex);
             } else {
                 /* Mobile */
@@ -10,7 +10,7 @@ $(document).ready(function() {
             }
         },
         navigation: true,
-        responsiveWidth: 1024
+        responsiveWidth: 900
     });
 
     // Arrow click, move down a section

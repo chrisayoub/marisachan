@@ -1,7 +1,7 @@
 
 // MARK: For the image modal, only on desktop!
 document.addEventListener("DOMContentLoaded", function(event) { 
-	if (window.innerWidth <= 1023) {
+	if (window.innerWidth < 900) {
 		return;
 	}
 

@@ -34,7 +34,7 @@ a, h1, h3, p {
     color: #414042;
 }
 
-a {
+h1 a {
     text-decoration: none;
 }
 
@@ -204,7 +204,7 @@ a {
 }
 
 /* MARK: Mobile */
-@media only screen and (max-width : 1024px) {
+@media only screen and (max-width: 900px) {
     /* For mobile phones: */
     .fp-responsive div .section:not(.introSection) {
         height: auto !important;
@@ -287,5 +287,12 @@ a {
         text-align: left !important;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+/* iPad landscape */
+@media only screen and (max-width: 1024px) { 
+    h1:not(#hello) {
+        font-size: 3em !important;
     }
 }
