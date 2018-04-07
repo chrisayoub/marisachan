@@ -55,19 +55,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.body.appendChild(btn);
 
     // Show scroll-to-top button
+    modifyButtonVisible(btn);
     window.addEventListener("scroll", function() {
-        if (!menuOpen) {
-            if (window.pageYOffset > 200) {
-                btn.style.opacity = "1";
-                btn.style.visibility = "visible";
-            }
-            else {
-                btn.style.visibility = "hidden";
-                btn.style.opacity = "0";
-            }
-        }
+        modifyButtonVisible(btn);
     }, false);
 });
+
+function modifyButtonVisible(btn) {
+    if (!menuOpen) {
+        if (window.pageYOffset > 200) {
+            btn.style.opacity = "1";
+            btn.style.visibility = "visible";
+        }
+        else {
+            btn.style.visibility = "hidden";
+            btn.style.opacity = "0";
+        }
+    }
+}
 
 // Disable scrolling once menu is opened
 function menuClicked() {
