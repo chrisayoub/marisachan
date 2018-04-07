@@ -107,7 +107,7 @@ label input:checked + .menu .hamburger:before {
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 48pt;
+  font-size: 4em;
   color: #FFF;
   text-decoration: none;
 }
@@ -133,6 +133,6 @@ label input:checked + .menu .hamburger:before {
 /* MARK: Mobile */
 @media only screen and (max-width: 1024px) {
   label a {
-      font-size: 36pt;
+      font-size: 3em;
   }
 }

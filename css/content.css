@@ -18,7 +18,7 @@ h1, h3, p, a {
 #title {
 	font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 40pt;
+    font-size: 3.33em;
     margin-bottom: 0;
 }
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 h3 {
-	font-size: 12pt;
+	font-size: 1em;
 	font-weight: 400;
     font-family: open-sans, sans-serif;
 }
@@ -37,11 +37,11 @@ h3 {
 p {
 	font-weight: 400;
     font-family: open-sans, sans-serif;
-    font-size: 12pt;
+    font-size: 1em;
 }
 
 .smallText {
-	font-size: 10pt;
+	font-size: 0.833em;
 }
 
 /* Images should fill containers */
@@ -52,6 +52,10 @@ img {
 @media only screen and (max-width: 768px) { 
 	h3 {
 		margin-bottom: -4em;
+	}
+
+	#title {
+		font-size: 2.75em;
 	}
 }
 

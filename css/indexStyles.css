@@ -11,30 +11,31 @@
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 48pt;
+    font-size: 4em;
     margin-top: 0;
     margin-bottom: 0;
-    color: #414042;
     width: inherit;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    color: #414042;
     width: inherit;
 }
 
 p {
     font-family: open-sans, sans-serif;
-    font-size: 12pt;
+    font-size: 1em;
     font-weight: 400;
+}
+
+/* Text colors */
+a, h1, h3, p {
     color: #414042;
 }
 
-/* Link colors */
 a {
-    color: #414042;
+    text-decoration: none;
 }
 
 /* MARK: Slide spacing */
@@ -65,10 +66,6 @@ a {
 .halfBox a img {
     max-width: 100%;
     max-height: 100%;
-}
-
-.halfBox a {
-    width: 100%;
 }
 
 .grayBack {
@@ -116,7 +113,7 @@ a {
 #hello {
     text-align: center;
     color: #F69473; 
-    font-size: 100pt;
+    font-size: 8.33em;
     margin-top: 30vh;
 }
 
@@ -244,15 +241,15 @@ a {
 
         flex-grow: 0 !important;
         flex-shrink: 1 !important;
-        flex-basis: none;
+        /*flex-basis: none;*/
     }
 
     h1 {
-        font-size: 24pt !important;
+        font-size: 2em !important;
     }
 
     h3 {
-        font-size: 12pt !important;
+        font-size: 1em !important;
     }
 
     .line {
@@ -285,7 +282,7 @@ a {
     }
 
     #hello {
-        font-size: 48pt !important;
+        font-size: 4em !important;
         width: 62.5%;
         text-align: left !important;
         margin-left: auto;
