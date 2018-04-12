@@ -23,7 +23,7 @@ h1, h3, p, a {
 }
 
 h1 {
-	font-family: freight-sans-pro, sans-serif;
+	font-family: open-sans, sans-serif;
 	font-style: normal;
 	font-weight: 600;
 }
@@ -61,4 +61,70 @@ img {
 
 .whiteImageBorder {
 	border: 1px solid #3c3c48;
+}
+
+/* MARK: Next and Previous Project buttons */
+.line {
+    width: 10px;
+    height: 2px;
+    background: #F69473;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* Animate the line */
+    transition: width 0.5s;
+}
+
+/* Line show on hover */
+.nextProj:hover > .line {
+    width: 50px;
+}
+
+.nextProj { 
+	display: inline-block;
+	text-decoration: none;
+}
+
+.nextProj div h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	display: inline-block;
+}
+
+.nextProj div .secondLine {
+	font-weight: bold;
+	display: block;
+}
+
+.nextProj div {
+	display: inline-block;
+}
+
+.halfMenu {
+	width: 50%;
+	float: left;
+	display: inline-block;
+	padding: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+	.line {
+		display: none;
+	}
+
+	.nextProj div .secondLine {
+		display: none;
+	}
+
+	.nextProj div h3 {
+		display: block;
+	}
+
+	.nextProj {
+		width: 80%;
+		border: 1px solid;
+		border-radius: 6px;
+		padding: 8px;
+	}
 }
