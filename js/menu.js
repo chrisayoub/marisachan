@@ -7,7 +7,6 @@ var divBarrier;
 var menuList;
 
 var waiting = false, endScrollHandle;
-var bottomPageOffset;
 
 var hasNextProj;
 
@@ -69,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.body.appendChild(btn);
 
     hasNextProj = document.getElementsByClassName("nextProj").length != 0;
-    bottomPageOffset = document.documentElement.scrollHeight - window.innerHeight;
 
     scrollFunc(btn); 
 
@@ -120,7 +118,7 @@ function modifyButtonVisible(btn) {
 
 function modifyButtonVisibleBothDirs(btn) {
     if (!menuOpen) {
-        var amtToBottom = bottomPageOffset - window.pageYOffset;
+        var amtToBottom = document.documentElement.scrollHeight - window.innerHeight - window.pageYOffset;
 
         if (window.pageYOffset > 200 && amtToBottom > stickOffset) {
             if (btn.style.opacity != "1") {
