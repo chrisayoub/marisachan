@@ -6,6 +6,13 @@ var menuOpen = false;
 var divBarrier;
 var menuList;
 
+var waiting = false, endScrollHandle;
+var bottomPageOffset;
+
+var hasNextProj;
+
+var stickOffset = 125;
+
 document.addEventListener("DOMContentLoaded", function(event) { 
     var menuStr = `
       <input type="checkbox" />
@@ -61,21 +68,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
     document.body.appendChild(btn);
 
-    if (document.getElementsByClassName("nextProj").length != 0) {
-        // Show scroll-to-top button BOTH DIRS
-        modifyButtonVisibleBothDirs(btn);
-        window.addEventListener("scroll", function() {
-            modifyButtonVisibleBothDirs(btn);
-        }, false);
-    } else {
-        // Show scroll-to-top button
-        modifyButtonVisible(btn);
-        window.addEventListener("scroll", function() {
-            modifyButtonVisible(btn);
-        }, false);
-    }    
+    hasNextProj = document.getElementsByClassName("nextProj").length != 0;
+    bottomPageOffset = document.documentElement.scrollHeight - window.innerHeight;
+
+    scrollFunc(btn); 
+
+    window.addEventListener("scroll", function() {
+        if (waiting) {
+            return;
+        }
+        waiting = true;
+
+        clearTimeout(endScrollHandle);
+
+        scrollFunc(btn);
+
+        setTimeout(function () {
+            waiting = false;
+        }, 100);
+
+        endScrollHandle = setTimeout(function() {
+            scrollFunc(btn);
+        }, 200);
+    }, false);
 });
 
+function scrollFunc(btn) {
+    if (hasNextProj) {
+        modifyButtonVisibleBothDirs(btn);
+    } else {
+        modifyButtonVisible(btn);
+    }
+}
 
 function modifyButtonVisible(btn) {
     if (!menuOpen) {
@@ -96,8 +120,7 @@ function modifyButtonVisible(btn) {
 
 function modifyButtonVisibleBothDirs(btn) {
     if (!menuOpen) {
-        var stickOffset = 125;
-        var amtToBottom = document.documentElement.scrollHeight - window.pageYOffset - window.innerHeight;
+        var amtToBottom = bottomPageOffset - window.pageYOffset;
 
         if (window.pageYOffset > 200 && amtToBottom > stickOffset) {
             if (btn.style.opacity != "1") {
