@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     menuList.id = "menuList";
     menuList.innerHTML = `
       <li>
-        <a href="index.html">HOME.</a>
+        <a href="index.html">PORTFOLIO.</a>
       </li>
       <li>
         <a href="about.html">ABOUT.</a>
@@ -37,10 +37,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     `;
     document.body.appendChild(menuList);
 
+    // Adding scroll-to-top
+
     // Add button scroll-to-top, only on Desktop
     if (window.innerWidth < 900) {
         return;
     }
+    // Don't add on index with fullpage.js
+    if (document.getElementById("fullpage") != null) {
+        return;
+    }
+
     var btn = document.createElement('img');
     btn.classList.add("noModal");
     btn.src = "images/up-arrow.svg";
@@ -54,22 +61,55 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
     document.body.appendChild(btn);
 
-    // Show scroll-to-top button
-    modifyButtonVisible(btn);
-    window.addEventListener("scroll", function() {
+    if (document.getElementsByClassName("nextProj").length != 0) {
+        // Show scroll-to-top button BOTH DIRS
+        modifyButtonVisibleBothDirs(btn);
+        window.addEventListener("scroll", function() {
+            modifyButtonVisibleBothDirs(btn);
+        }, false);
+    } else {
+        // Show scroll-to-top button
         modifyButtonVisible(btn);
-    }, false);
+        window.addEventListener("scroll", function() {
+            modifyButtonVisible(btn);
+        }, false);
+    }    
 });
+
 
 function modifyButtonVisible(btn) {
     if (!menuOpen) {
         if (window.pageYOffset > 200) {
-            btn.style.opacity = "1";
-            btn.style.visibility = "visible";
+            if (btn.style.opacity != "1") {
+                btn.style.opacity = "1";
+                btn.style.visibility = "visible";   
+            }
         }
         else {
-            btn.style.visibility = "hidden";
-            btn.style.opacity = "0";
+            if (btn.style.opacity != "0") {
+                btn.style.visibility = "hidden";
+                btn.style.opacity = "0";   
+            }
+        }
+    }
+}
+
+function modifyButtonVisibleBothDirs(btn) {
+    if (!menuOpen) {
+        var stickOffset = 125;
+        var amtToBottom = document.documentElement.scrollHeight - window.pageYOffset - window.innerHeight;
+
+        if (window.pageYOffset > 200 && amtToBottom > stickOffset) {
+            if (btn.style.opacity != "1") {
+                btn.style.opacity = "1";
+                btn.style.visibility = "visible";   
+            }
+        }
+        else {
+            if (btn.style.opacity != "0") {
+                btn.style.visibility = "hidden";
+                btn.style.opacity = "0";   
+            }
         }
     }
 }
