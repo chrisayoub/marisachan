@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     menuList.id = "menuList";
     menuList.innerHTML = `
       <li>
-        <a href="index.html">PORTFOLIO.</a>
+        <a href="index.html">HOME.</a>
       </li>
       <li>
         <a href="about.html">ABOUT.</a>
