@@ -1,5 +1,5 @@
 // Initalize AOS
-document.addEventListener("DOMContentLoaded", function(event) { 
+window.onload = function(event) { 
     // Mobile case
     if (window.innerWidth < 900) {
 		var attribs = document.querySelectorAll('[data-aos-delay]');
@@ -11,4 +11,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
         duration: 1000,
         once: true
     });
-});
+}
